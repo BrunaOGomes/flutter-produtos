@@ -12,5 +12,8 @@ class ProductRepositoryImpl extends ProductRepository{
   Future<List<ProductEntity>> getProducts() async {
     return await productDatasource.getProducts();
   }
-
+@override
+  Future<bool> createProduct (ProductEntity product) async {
+    return await productDatasource.createProduct(product);
+  }
 }
