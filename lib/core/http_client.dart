@@ -13,4 +13,12 @@ class CustomHttpClient {
     // await aguarda a resposta antes de continuar
     return await dio.get('https://gdapp.com.br/api/fiap/products');
   }
+
+  Future<Response> createProduct(Map<String, dynamic> data) async {
+    return await dio.post('https://gdapp.com.br/api/fiap/products', data: data);
+  }
+  Future<Response> updateProduct(it  ,Map<String, dynamic> productData) async {
+    return await dio.post('https://gdapp.com.br/api/fiap/products', data: productData);
+  }
+
 }
